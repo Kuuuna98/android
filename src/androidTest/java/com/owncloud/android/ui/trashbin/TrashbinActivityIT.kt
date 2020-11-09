@@ -25,6 +25,7 @@ import androidx.test.espresso.intent.rule.IntentsTestRule
 import com.facebook.testing.screenshot.Screenshot
 import com.owncloud.android.AbstractIT
 import com.owncloud.android.utils.ScreenshotTest
+import com.owncloud.android.utils.ScreenshotTest2
 import org.junit.Rule
 import org.junit.Test
 
@@ -37,7 +38,7 @@ class TrashbinActivityIT : AbstractIT() {
     var activityRule = IntentsTestRule(TrashbinActivity::class.java, true, false)
 
     @Test
-    @ScreenshotTest
+    @ScreenshotTest2
     fun error() {
         val sut: TrashbinActivity = activityRule.launchActivity(null)
 
