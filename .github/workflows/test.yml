@@ -30,7 +30,4 @@ jobs:
                 with:
                     api-level: 29
                     script:
-                        ./gradlew gplayDebugExecuteScreenshotTests \
-                        -Pandroid.testInstrumentationRunnerArguments.annotation=com.owncloud.android.utils.ScreenshotTest \ ||
-                        scripts/uploadReport.sh "$LOG_USERNAME" "$LOG_PASSWORD" ${{github.event.number}} \
-                        "test" "Screenshot" ${{github.event.number}} "$GIT_USERNAME" "$GIT_TOKEN"
+                        ./gradlew gplayDebugExecuteScreenshotTests -Pandroid.testInstrumentationRunnerArguments.annotation=com.owncloud.android.utils.ScreenshotTest || scripts/uploadReport.sh "$LOG_USERNAME" "$LOG_PASSWORD" ${{github.event.number}} "test" "Screenshot" ${{github.event.number}} "$GIT_USERNAME" "$GIT_TOKEN"
