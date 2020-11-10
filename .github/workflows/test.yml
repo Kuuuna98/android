@@ -31,4 +31,4 @@ jobs:
                     api-level: 29
                     emulator-options: "-skin 500x833"
                     script:
-                        ./gradlew gplayDebugExecuteScreenshotTests -Pandroid.testInstrumentationRunnerArguments.annotation=com.owncloud.android.utils.ScreenshotTest2 || scripts/uploadReport.sh "$LOG_USERNAME" "$LOG_PASSWORD" ${{github.event.number}} "test" "Screenshot" ${{github.event.number}} "$GIT_USERNAME" "$GIT_TOKEN"
+                        ./gradlew gplayDebugExecuteScreenshotTests -Pandroid.testInstrumentationRunnerArguments.annotation=com.owncloud.android.utils.ScreenshotTest2 || scripts/uploadReport.sh "$LOG_USERNAME" "$LOG_PASSWORD" ${{github.event.number}} "test" "Screenshot" ${{github.event.number}} "$GIT_USERNAME" "$GIT_TOKEN" || exit 1
